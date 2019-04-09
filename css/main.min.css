@@ -4314,6 +4314,12 @@ ul, li, ol {
 /* Price */
 .price {
   padding: 10vh 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0.75))), url(https://static.tildacdn.com/tild3563-3738-4633-b430-616265386433/remont-remontby-back.jpg);
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(https://static.tildacdn.com/tild3563-3738-4633-b430-616265386433/remont-remontby-back.jpg);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(https://static.tildacdn.com/tild3563-3738-4633-b430-616265386433/remont-remontby-back.jpg);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(https://static.tildacdn.com/tild3563-3738-4633-b430-616265386433/remont-remontby-back.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 .price--tab {
@@ -4483,7 +4489,6 @@ ul, li, ol {
   -webkit-border-radius: 10px;
           border-radius: 10px;
   line-height: 1.1;
-  background-image: url("https://static.tildacdn.com/tild3932-6566-4531-b337-376239323962/remont-kit-back-11_1.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
