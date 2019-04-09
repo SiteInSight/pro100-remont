@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "roboto-example";
   font-weight: normal;
@@ -12,6 +13,38 @@
   font-style: normal;
   src: url("../fonts/RobotoBold/RobotoBold.eot");
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mureal";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Mureal/MullerExtraBoldDEMO.eot");
+  src: url("../fonts/Mureal/MullerExtraBoldDEMO.eot?#iefix") format("embedded-opentype"), url("../fonts/Mureal/MullerExtraBoldDEMO.woff") format("woff"), url("../fonts/Mureal/MullerExtraBoldDEMO.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Proxima/ProximaNova-Regular.eot");
+  src: url("../fonts/Proxima/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima/ProximaNova-Regular.woff") format("woff"), url("../fonts/Proxima/ProximaNova-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Proxima/ProximaNova-Light.eot.eot");
+  src: url("../fonts/Proxima/ProximaNova-Light.eot.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima/ProximaNova-Light.eot.woff") format("woff"), url("../fonts/Proxima/ProximaNova-Light.eot.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Proxima/ProximaNova-Bold.eot");
+  src: url("../fonts/Proxima/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima/ProximaNova-Bold.woff") format("woff"), url("../fonts/Proxima/ProximaNova-Bold.ttf") format("truetype");
 }
 
 /*!
@@ -4078,12 +4111,12 @@ html {
 }
 
 ::-moz-selection {
-  background-color: orange;
+  background-color: #cb001b;
   color: #fff;
 }
 
 ::selection {
-  background-color: orange;
+  background-color: #cb001b;
   color: #fff;
 }
 
@@ -4092,9 +4125,9 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.65;
-  font-family: "roboto-example", sans-serif;
+  font-family: Proxima, sans-serif;
   overflow-x: hidden;
-  color: #333;
+  color: #000;
 }
 
 body input, body textarea {
@@ -4127,6 +4160,714 @@ body input:required:valid, body textarea:required:valid {
 b,
 strong {
   font-weight: bold;
+}
+
+ul, li, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: 0;
+}
+
+.heading-1 {
+  font-weight: bold;
+  font-family: Mureal;
+  font-size: 3.5em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.heading-1 span {
+  display: inline-block;
+  background: #dc3545;
+  color: #fff;
+  margin-top: 0.35em;
+  padding: 0 5px;
+}
+
+.heading-2 {
+  font-weight: bold;
+  font-family: Mureal;
+  font-size: 2.35em;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  overflow: visible;
+  -webkit-box-shadow: 0 0.375em 0.675em rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0.375em 0.675em rgba(0, 0, 0, 0.6);
+}
+
+.btn--red {
+  background: #dc3545;
+  padding: 15px 120px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.btn--red:hover {
+  background: #ff0000;
+}
+
+.btn--pic {
+  position: relative;
+}
+
+.btn--pic::after {
+  position: absolute;
+  content: '';
+  height: 70px;
+  width: 105px;
+  top: -20%;
+  left: 0;
+  background-image: url(https://static.tildacdn.com/tild3938-3364-4330-b261-646530336334/Plan2-reshenie.png);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  background: #fff;
+  -webkit-box-shadow: 0 0.275em 0.574em rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.275em 0.574em rgba(0, 0, 0, 0.2);
+  color: #000;
+  z-index: 100;
+}
+
+.header--list .header--list__item {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.header--number {
+  width: 100%;
+  text-align: right;
+}
+
+.header--number a {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Mureal;
+  color: #000;
+  display: block;
+  line-height: 1;
+}
+
+.header--number span {
+  line-height: 1;
+  font-size: 15px;
+  opacity: .7;
+}
+
+.hamburger {
+  text-align: right;
+  cursor: pointer;
+}
+
+.scrollTo {
+  cursor: pointer;
+  position: relative;
+}
+
+.scrollTo::before {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  width: 0;
+  height: 1px;
+  right: 0;
+  background: #000;
+}
+
+.scrollTo:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Head */
+.head {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #fff), to(rgba(0, 0, 0, 0))), url("http://sm-remont.ru/images/sm-remont/pic7.jpg");
+  background-image: -webkit-linear-gradient(left, #fff 40%, rgba(0, 0, 0, 0)), url("http://sm-remont.ru/images/sm-remont/pic7.jpg");
+  background-image: -o-linear-gradient(left, #fff 40%, rgba(0, 0, 0, 0)), url("http://sm-remont.ru/images/sm-remont/pic7.jpg");
+  background-image: linear-gradient(to right, #fff 40%, rgba(0, 0, 0, 0)), url("http://sm-remont.ru/images/sm-remont/pic7.jpg");
+  padding: 15vh 0 5vh;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+/* Price */
+.price {
+  padding: 10vh 0;
+}
+
+.price--tab {
+  background: #fff;
+  padding: 40px 20px;
+  -webkit-box-shadow: 0 0.375em 0.675em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.375em 0.675em rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+}
+
+.price--tab__btn {
+  margin-top: 20px;
+}
+
+.price--tab__subtitle {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Mureal;
+  opacity: .7;
+  line-height: 1;
+  margin-bottom: 2em;
+}
+
+.price--tab__desc li {
+  padding-left: 15px;
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.price--tab__desc li::after {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #000;
+  left: 0;
+  top: 50%;
+  margin-top: -3px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+}
+
+.price--tab__title {
+  width: 100%;
+  font-weight: bold;
+  font-family: Mureal;
+  font-size: 22px;
+}
+
+.price--tab__price {
+  margin: 0.5em 0;
+}
+
+.price--tab__price .price-price__title {
+  font-size: 22px;
+  margin: 0.75em 0 0;
+  font-weight: bold;
+  font-family: Mureal;
+}
+
+.price--tab__price .price--price__old {
+  opacity: .6;
+  line-height: 1;
+  text-decoration: line-through;
+  font-size: 18px;
+}
+
+.price--tab__price .price--price__new {
+  line-height: 1;
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Mureal;
+}
+
+/* Works */
+.works {
+  padding: 10vh 0;
+}
+
+/* Review */
+.review {
+  padding: 10vh 0;
+  position: relative;
+}
+
+.review--item {
+  background: #fff;
+  -webkit-box-shadow: 0 0.375em 0.675em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.375em 0.675em rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 50px 20px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.review--item .review--item__name {
+  font-weight: bold;
+  font-family: Mureal;
+  font-size: 22px;
+  margin: 1.5em 0 0.5em;
+}
+
+/* Credit */
+.credit {
+  padding: 10vh 0;
+  background-image: url(http://русский-ремонт.рф/img/adv-bg.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  color: #000;
+}
+
+/* Why */
+.why {
+  padding: 10vh 0;
+}
+
+.why--item {
+  position: relative;
+}
+
+.why--item .why--item__txt {
+  font-weight: bold;
+  font-family: Mureal;
+  font-size: 22px;
+  margin: 0.5em 0;
+}
+
+/* Control */
+.control {
+  min-height: 50vh;
+  color: #fff;
+  padding: 5vh 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(https://static.tildacdn.com/tild6334-6364-4561-b531-633536396565/remont-bg-divan.jpg);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(https://static.tildacdn.com/tild6334-6364-4561-b531-633536396565/remont-bg-divan.jpg);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(https://static.tildacdn.com/tild6334-6364-4561-b531-633536396565/remont-bg-divan.jpg);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(https://static.tildacdn.com/tild6334-6364-4561-b531-633536396565/remont-bg-divan.jpg);
+}
+
+.control--inner {
+  background: #fff;
+  padding: 15px;
+  height: 45vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  line-height: 1.1;
+  background-image: url("https://static.tildacdn.com/tild3932-6566-4531-b337-376239323962/remont-kit-back-11_1.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -100px -0px;
+}
+
+.control--inner .control--form__title {
+  font-weight: bold;
+  font-family: Mureal;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+
+.control--inner .control--form__subtitle {
+  font-size: 13px;
+}
+
+.control--inner .control--form__item {
+  width: 100%;
+  margin: 2em 0;
+}
+
+.control--inner .control--form__item input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #000;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+.control--inner .control--form__item .btn {
+  width: 100%;
+}
+
+.control--adv__num {
+  font-weight: bold;
+  opacity: .75;
+  font-size: 15px;
+  font-family: Mureal;
+}
+
+.control--adv__title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0.5em 0 0.25em;
+}
+
+.control--adv__txt {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Wrap */
+.wrap {
+  padding: 10vh 0;
+}
+
+.wrap--box {
+  position: relative;
+  padding: 70px 30px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(https://static.tildacdn.com/tild3235-3336-4736-b965-316564666563/prev-8.jpg);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://static.tildacdn.com/tild3235-3336-4736-b965-316564666563/prev-8.jpg);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://static.tildacdn.com/tild3235-3336-4736-b965-316564666563/prev-8.jpg);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://static.tildacdn.com/tild3235-3336-4736-b965-316564666563/prev-8.jpg);
+  background-position: center;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.wrap--box:hover {
+  -webkit-background-size: 120% 120%;
+          background-size: 120%;
+}
+
+.wrap--box .wrap--inner {
+  text-align: center;
+  padding: 40px 15px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.wrap--box .wrap--inner .wrap--title {
+  font-weight: bold;
+  font-size: 22px;
+  font-family: Mureal;
+  margin-bottom: 20px;
+}
+
+/* QA */
+.qa {
+  padding: 10vh 0;
+  position: relative;
+}
+
+.faq__box {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: .5em;
+          border-radius: .5em;
+  margin-top: 1em;
+}
+
+.faq__box:first-child {
+  margin-top: 3em;
+}
+
+.faq__box .faq__head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  cursor: pointer;
+}
+
+.faq__box .faq__head .faq__title {
+  font-weight: bold;
+  font-size: 22px;
+  font-family: Mureal;
+}
+
+.faq__box .faq__head .faq__icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70px;
+}
+
+.faq__box .faq__head .faq__icon span {
+  position: relative;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  position: relative;
+  background: #dc3545;
+  width: 30px;
+  height: 3px;
+  display: block;
+}
+
+.faq__box .faq__head .faq__icon span::before {
+  position: absolute;
+  background: #dc3545;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+      -ms-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+  -webkit-transition: all .75s ease;
+  -o-transition: all .75s ease;
+  transition: all .75s ease;
+  content: '';
+}
+
+.faq__box .faq__body {
+  padding: 0 70px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.faq__box .faq__body .faq__text {
+  padding: 30px 0;
+}
+
+.faq__box.active {
+  background: #fff;
+  -webkit-box-shadow: 0 0.375em 0.675em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.375em 0.675em rgba(0, 0, 0, 0.5);
+}
+
+.faq__box.active .faq__body {
+  max-height: 800px;
+}
+
+.faq__box.active .faq__head {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.faq__box.active .faq__head .faq__icon span::before {
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      -ms-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Contacts */
+#map {
+  height: 50vh;
+}
+
+.map--wrapper {
+  position: relative;
+}
+
+.map--container {
+  width: 320px;
+  background: #fff;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  padding: 30px;
+}
+
+.map--container__title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.map--container__txt {
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.map--container__mail {
+  font-size: 18px;
+}
+
+.map--container__num {
+  font-size: 24px;
+}
+
+.map--container__num a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: #121212;
+  color: #fff;
+  padding: 3em 0;
+}
+
+.footer--nav {
+  position: relative;
+}
+
+.footer--nav .footer--nav__item {
+  font-size: 14px;
+  color: #fff;
+  opacity: .8;
+  margin: 5px 0;
+}
+
+.footer--nav .footer--nav__title {
+  font-weight: bold;
+  font-size: 16px;
+  opacity: .4;
+  margin-bottom: 20px;
+  font-family: Mureal;
+}
+
+.footer--services .footer--click {
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.footer--services .footer--click:hover {
+  opacity: .45;
+}
+
+.footer--services .footer--num {
+  position: relative;
+}
+
+.footer--services .footer--num a {
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+}
+
+.footer-services__title {
+  font-weight: bold;
+  font-size: 16px;
+  opacity: .4;
+  margin-bottom: 20px;
+  font-family: Mureal;
+}
+
+.footer--form {
+  position: relative;
+}
+
+.footer--form .footer--from__title {
+  font-size: 16px;
+  opacity: .4;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: Mureal;
+}
+
+.footer--form .footer--form__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer--form .footer--form__wrapper .footer--form__input {
+  width: 80%;
+}
+
+.footer--form .footer--form__wrapper .footer--form__input input {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 10px;
+  color: #000;
+  border: 0;
+}
+
+.footer--form .footer--form__wrapper .footer--form__btn {
+  width: 44px;
+  height: 44px;
+}
+
+.footer--form .footer--form__wrapper .footer--form__btn button {
+  background: #dc3545;
+  border: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
 }
 
 /*==========  Desktop First  ==========*/
