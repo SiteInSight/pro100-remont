@@ -4124,7 +4124,7 @@ body {
   font-size: 16px;
   min-width: 320px;
   position: relative;
-  line-height: 1.65;
+  line-height: 1.5;
   font-family: Proxima, sans-serif;
   overflow-x: hidden;
   color: #000;
@@ -4169,6 +4169,16 @@ ul, li, ol {
   outline: 0;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
 .heading-1 {
   font-weight: bold;
   font-family: Mureal;
@@ -4193,6 +4203,7 @@ ul, li, ol {
 
 .btn {
   display: inline-block;
+  text-align: center;
   cursor: pointer;
   border: 0;
   -webkit-border-radius: 10px;
@@ -4204,7 +4215,7 @@ ul, li, ol {
 
 .btn--red {
   background: #dc3545;
-  padding: 15px 120px;
+  padding: 15px 30px;
   font-weight: bold;
   font-size: 16px;
   color: #fff;
@@ -4218,6 +4229,7 @@ ul, li, ol {
 }
 
 .btn--pic {
+  padding: 15px 120px;
   position: relative;
 }
 
@@ -4233,6 +4245,126 @@ ul, li, ol {
           background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+/*  Menu */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 101;
+  -webkit-box-shadow: 0.375em 0 0.975em rgba(0, 0, 0, 0.75);
+          box-shadow: 0.375em 0 0.975em rgba(0, 0, 0, 0.75);
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateX(150%);
+      -ms-transform: translateX(150%);
+          transform: translateX(150%);
+  -webkit-transform: all .3s ease;
+      -ms-transform: all .3s ease;
+          transform: all .3s ease;
+}
+
+.menu .menu--close {
+  -webkit-transition-delay: .3s;
+       -o-transition-delay: .3s;
+          transition-delay: .3s;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transform: translateX(150%);
+      -ms-transform: translateX(150%);
+          transform: translateX(150%);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.menu .menu--inner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  padding: 80px 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+}
+
+.menu .menu--inner .menu--social {
+  text-align: center;
+  width: 100%;
+}
+
+.menu .menu--inner .menu--social .menu--social__address {
+  margin-top: 20px;
+}
+
+.menu .menu--inner .menu--social__item {
+  font-size: 18px;
+}
+
+.menu .menu--inner .menu--social__item a {
+  font-size: 24px;
+  font-family: Mureal;
+  font-weight: bold;
+  font-size: 26px;
+  color: #000;
+}
+
+.menu .menu--inner .menu--list {
+  position: relative;
+  width: 100%;
+}
+
+.menu .menu--inner .menu--list .header--list__logo {
+  margin-bottom: 30px;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .menu--inner .menu--list__item {
+  position: relative;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.menu .menu--inner .menu--list__item a {
+  font-family: Mureal;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 /* Header */
@@ -4280,6 +4412,7 @@ ul, li, ol {
 .scrollTo {
   cursor: pointer;
   position: relative;
+  display: inline-block;
 }
 
 .scrollTo::before {
@@ -4334,6 +4467,11 @@ ul, li, ol {
 
 .price--tab__btn {
   margin-top: 20px;
+}
+
+.price--tab__btn .btn {
+  width: 100%;
+  text-align: center;
 }
 
 .price--tab__subtitle {
@@ -4495,6 +4633,10 @@ ul, li, ol {
   background-position: -100px -0px;
 }
 
+.control--inner .control--form {
+  width: 100%;
+}
+
 .control--inner .control--form__title {
   font-weight: bold;
   font-family: Mureal;
@@ -4538,7 +4680,7 @@ ul, li, ol {
 }
 
 .control--adv__txt {
-  font-size: 16px;
+  font-size: 13px;
   opacity: 0.8;
 }
 
@@ -4762,6 +4904,7 @@ ul, li, ol {
   color: #fff;
   opacity: .8;
   margin: 5px 0;
+  display: block;
 }
 
 .footer--nav .footer--nav__title {
@@ -4876,4 +5019,98 @@ ul, li, ol {
 }
 
 /*==========  Desktop First  ==========*/
+@media (max-width: 991.98px) {
+  .wrap--box .wrap--inner .wrap--title {
+    font-size: 18px;
+  }
+  .wrap--text {
+    font-size: 12px;
+  }
+  .price .container, .review .container {
+    max-width: 100%;
+  }
+  .heading-1 {
+    font-size: 2.5em;
+  }
+  .btn--pic {
+    padding: 15px 30px;
+  }
+  .btn--pic::after {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .price--tab__price .price--price__new {
+    font-size: 18px;
+  }
+  .price--tab__title {
+    font-size: 18px;
+  }
+  .price--tab__subtitle {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .price--tab__price .price--price__old {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .price--tab__desc li {
+    font-size: 13px;
+  }
+  .price-price__title {
+    display: none;
+  }
+  .control--inner {
+    height: auto;
+    margin-top: 30px;
+  }
+  .control .row:first-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .map--container {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+  .heading-2 {
+    font-size: 1.7em;
+  }
+  .control--adv__txt {
+    font-size: 12px;
+  }
+  .control--subtitle, .review--item__txt {
+    font-size: 14px;
+  }
+  .faq__box .faq__head .faq__title {
+    font-size: 16px;
+  }
+  .faq__box .faq__body .faq__text {
+    font-size: 13px;
+    padding: 15px 0;
+  }
+  .control--adv__title {
+    font-size: 16px;
+  }
+  .heading-1 {
+    font-size: 2em;
+  }
+  .faq__box .faq__body {
+    padding: 0 0 0 70px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header--number a {
+    font-size: 15px;
+  }
+  .header--number span {
+    font-size: 13px;
+  }
+}
+
 /*==========  Mobile First  ==========*/
