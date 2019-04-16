@@ -9,6 +9,8 @@
 	<title>OptimizedHTML 4</title>
 	<meta name="description" content="">
 
+	<meta og:name="">
+
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -24,6 +26,11 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="libs/magnific/magnific-popup.css">
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/magnific/jquery.magnific-popup.min.js"></script>
 
 	<link rel="stylesheet" href="css/main.min.css">
 
@@ -130,51 +137,74 @@
 		</section>
 		<section class="head" id="head">
 			<div class="container">
-				<div class="row">
-					<div class="col-12 col-md-7">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-8">
 						<h1 class="heading-1">
 							Ремонт под ключ <br>
 							В москве от
 							<span>2500 руб/м2</span>
 						</h1>
 						<div class="head--list">
-							<div class="row">
+							<div class="row align-items-center">
 								<div class="col-6 mt-3 mt-md-5">
 									<div class="head--list__pic">
-										<img src="http://русский-ремонт.рф/img/icons/banner-ic4.png" alt="">
+										<img src="img/icon/hands.png" alt="">
 									</div>
 									<div class="head--list__txt">Выгодно</div>
-									<div class="head--list__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+									<div class="head--list__desc">Вы получаете качественный ремонт за небольшую сумму.</div>
 								</div>
 								<div class="col-6 mt-3 mt-md-5">
 									<div class="head--list__pic">
-										<img src="http://русский-ремонт.рф/img/icons/banner-ic4.png" alt="">
+										<img src="img/icon/bells.png" alt="">
 									</div>
 									<div class="head--list__txt">Быстро</div>
-									<div class="head--list__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+									<div class="head--list__desc">Никаких срыров сроков и затяжки ремонта.</div>
 								</div>
 								<div class="col-6 mt-3 mt-md-5">
 									<div class="head--list__pic">
-										<img src="http://русский-ремонт.рф/img/icons/banner-ic4.png" alt="">
+										<img src="img/icon/check.png" alt="">
 									</div>
 									<div class="head--list__txt">Эффктивно</div>
-									<div class="head--list__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+									<div class="head--list__desc">Делаем понятный и красивый дизайн квартиры.</div>
 								</div>
 								<div class="col-6 mt-3 mt-md-5">
 									<div class="head--list__pic">
-										<img src="http://русский-ремонт.рф/img/icons/banner-ic4.png" alt="">
+										<img src="img/icon/shield.png" alt="">
 									</div>
 									<div class="head--list__txt">Безопасно</div>
-									<div class="head--list__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+									<div class="head--list__desc">Вы получаете гарантию на все ремонтные работы.</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-5">
+					<div class="col-12 col-md-4">
 						<div class="head--form">
 							<div class="head--form__inner">
-								<div class="head--form__title">Форма?</div>
-								<div class="head--form__subtitle">...</div>
+								<div class="head--form__top">
+									<div class="head--form__title">Расчет ремонта</div>
+									<div class="head--form__subtitle">Проведем расчет сметы за 5 минут</div>
+								</div>
+								<div class="head--form__middle">
+									<div class="head--form__item">
+										<input type="text" class="head--form__input" name="name" placeholder="Ваше имя:">
+									</div>
+									<div class="head--form__item">
+										<input type="text" class="head--form__input" name="phone" placeholder="Ваш телефон: *">
+									</div>
+									<div class="head--form__item">
+											<label class="b-pform__optlabel b-pform__optlabel_single b-pform__optlabel_policy" data-pform-error="iexpolicy">
+													<input name="iexpolicy[1]" type="checkbox" checked="checked" value="confirm" data-pform-notsend="true">
+													Соглашаюсь с <a class="b-pform__policy iexmodal-show" data-iexmodal-width="700px" data-iexmodal-overlay="true" href="/tools/cm/iexModal/policy.htm">политикой конфиденциальности</a>
+											</label>
+									</div>
+								</div>
+								<div class="head--form__bottom">
+									<div class="head--form__btn">
+										<dutton type="submit" class="btn btn--red btn--pic">
+											Отправить
+										</dutton>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -189,11 +219,78 @@
 							Примеры наших работ
 						</h2>
 					</div>
-					<div class="col-12">
-						<div class="work--slider">
-							<div class="work--slider__item"></div>
-							<div class="work--slider__item"></div>
-							<div class="work--slider__item"></div>
+					<div class="col-12 mt-5">
+						<div class="grid">
+							<div class="grid-item grid-item--width2">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item grid-item--width2">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item grid-item--width2">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item grid-item--width2">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item grid-item--width2">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item grid-item--width2">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg">
+									<img src="https://gefest-remont.ru/f/gallery/pre2_img_9396_521.jpg" class="img-responsive" alt="">
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -357,19 +454,19 @@
 							<div class="row">
 								<div class="col-12 mt-3 mt-sm-0 col-sm-4">
 									<div class="credits--list__ico">
-										<img src="http://komfortn.ru/img/rass/1.png" alt="">
+										<img src="img/icon/calendar.jpg" alt="">
 									</div>
 									<div class="credits--list__txt">до 12 месяцев</div>
 								</div>
 								<div class="col-12 mt-3 mt-sm-0 col-sm-4">
 									<div class="credits--list__ico">
-										<img src="http://komfortn.ru/img/rass/1.png" alt="">
+										<img src="img/icon/money.jpg" alt="">
 									</div>
 									<div class="credits--list__txt">любая сумма</div>
 								</div>
 								<div class="col-12 mt-3 mt-sm-0 col-sm-4">
 									<div class="credits--list__ico">
-										<img src="http://komfortn.ru/img/rass/1.png" alt="">
+										<img src="img/icon/percent.jpg" alt="">
 									</div>
 									<div class="credits--list__txt">0% переплат</div>
 								</div>
@@ -392,49 +489,49 @@
 					</div>
 					<div class="col-6 col-md-4 mt-3 mt-md-5 why--item">
 						<div class="why--item__ico">
-							<img src="http://русский-ремонт.рф/img/adv-ic6.png" alt="">
+							<img src="img/icon/master.png" alt="">
 						</div>
-						<div class="why--item__txt">Гарантия</div>
+						<div class="why--item__txt">Лучшие мастера</div>
 						<div class="why--item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae
 							sapiente ratione dolor.</div>
 					</div>
 					<div class="col-6 col-md-4 mt-3 mt-md-5 why--item">
 						<div class="why--item__ico">
-							<img src="http://русский-ремонт.рф/img/adv-ic6.png" alt="">
+							<img src="img/icon/check-2.png" alt="">
 						</div>
-						<div class="why--item__txt">Гарантия</div>
+						<div class="why--item__txt">Честные сметы</div>
 						<div class="why--item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae
 							sapiente ratione dolor.</div>
 					</div>
 					<div class="col-6 col-md-4 mt-3 mt-md-5 why--item">
 						<div class="why--item__ico">
-							<img src="http://русский-ремонт.рф/img/adv-ic6.png" alt="">
+							<img src="img/icon/shield.png" alt="">
 						</div>
-						<div class="why--item__txt">Гарантия</div>
+						<div class="why--item__txt">Настоящая гарантия</div>
 						<div class="why--item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae
 							sapiente ratione dolor.</div>
 					</div>
 					<div class="col-6 col-md-4 mt-3 mt-md-5 why--item">
 						<div class="why--item__ico">
-							<img src="http://русский-ремонт.рф/img/adv-ic6.png" alt="">
+							<img src="img/icon/service.png" alt="">
 						</div>
-						<div class="why--item__txt">Гарантия</div>
+						<div class="why--item__txt">Качественный сервис</div>
 						<div class="why--item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae
 							sapiente ratione dolor.</div>
 					</div>
 					<div class="col-6 col-md-4 mt-3 mt-md-5 why--item">
 						<div class="why--item__ico">
-							<img src="http://русский-ремонт.рф/img/adv-ic6.png" alt="">
+							<img src="img/icon/ganat.png" alt="">
 						</div>
-						<div class="why--item__txt">Гарантия</div>
+						<div class="why--item__txt">Ответственность за результат</div>
 						<div class="why--item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae
 							sapiente ratione dolor.</div>
 					</div>
 					<div class="col-6 col-md-4 mt-3 mt-md-5 why--item">
 						<div class="why--item__ico">
-							<img src="http://русский-ремонт.рф/img/adv-ic6.png" alt="">
+							<img src="img/icon/ruble.png" alt="">
 						</div>
-						<div class="why--item__txt">Гарантия</div>
+						<div class="why--item__txt">Очень приятные цены</div>
 						<div class="why--item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae
 							sapiente ratione dolor.</div>
 					</div>
@@ -455,7 +552,7 @@
 								<div class="control--form__title">Узнайте подробнее о ходе работ</div>
 								<div class="control--form__subtitle">Вы оплачиваете работы по факту их выполнения поэтапно на основании
 									Актов выполненных работ</div>
-								<div class="control--form__title">Узнайте подробнее о ходе работ</div>
+								<div class="control--form__title">Полный контроль работы</div>
 								<div class="control--form__subtitle">Ремонт сопровождается договором, локальной сметой, ведомостями
 									материалов, графиком работ и оплаты, актами выполненных работ</div>
 								<div class="control--form__item">
