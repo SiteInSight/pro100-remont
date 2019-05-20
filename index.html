@@ -211,6 +211,99 @@
 				</div>
 			</div>
 		</section>
+		<section class="calc">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="calc-block-content">
+							<div class="row">
+								<div class="col-12 text-center mb-3">
+									<h2 class="heading-2">Рассчитайте стоимость ремонта</h2>
+								</div>
+								<div class="col-12 col-lg-5">
+									<div class="label">Площадь квартиры</div>
+									<div class="area-block range-container">
+										<input class="range-input" type="text" name="square" data-pform-mailheader="Площадь" data-pform-validation="required" value="40">
+									</div>
+								</div>
+								<div class="col-12 col-lg-7">
+									<div class="label">Укажите количество комнат</div>
+									<div class="room_count-container radio-container">
+										<label class="check-container">1
+											<input type="radio" name="room_count" data-pform-mailheader="Количество комнат" data-pform-validation="required" value="1"><span class="checkmark"></span>
+										</label>
+										<label class="check-container">2
+											<input type="radio" name="room_count" checked="" value="2"><span class="checkmark"></span>
+										</label>
+										<label class="check-container">3
+											<input type="radio" name="room_count" checked="" value="3"><span class="checkmark"></span>
+										</label>
+										<label class="check-container">4 &gt;
+											<input type="radio" name="room_count" checked="" value="4+"><span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<div class="col-12 col-lg-5 mt-3 mt-lg-5">
+									<div class="label">Вид ремонта</div>
+									<div class="remont_type-container radio-container">
+										<label class="check-container  check-val" data-to="list-one">Базовый
+											<input type="radio" data-pform-mailheader="Вид ремонта:" data-pform-validation="required" name="remont_type" checked="" value="Базовый"><span class="checkmark"></span>
+										</label>
+										<label class="check-container check-val" data-to="list-two">Стандарт
+											<input type="radio" name="remont_type" value="Стандарт"><span class="checkmark"></span>
+										</label>
+										<label class="check-container check-val" data-to="list-three">Полный
+											<input type="radio" name="remont_type" value="Полный"><span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="label mt-3">Цена за кв/м</div>
+									<div class="price--label">
+										<div class="price--label__txt price--label__1 list-one active">2 850 руб/м2</div>
+										<div class="price--label__txt price--label__2 list-two">3 100 руб/м2</div>
+										<div class="price--label__txt price--label__3 list-three">5 450 руб/м2</div>
+									</div>
+								</div>
+								<div class="col-12 col-lg-7 mt-lg-5 mt-3">
+									<div class="remont_dop-container">
+										<div class="label">Выберите дополнительные услуги</div>
+										<label class="check__container  check--val" data-to="list-one">Выравнивание пола
+											<input type="checkbox" data-pform-mailheader="Доп. услуги:" data-pform-validation="required" name="opit[1]" checked="" value="Косметический"><span class="icon-checkmark"></span>
+										</label>
+										<label class="check__container check--val" data-to="list-two">Выравнивание стен
+											<input type="checkbox" name="opit[2]" value="Стандарт"><span class="icon-checkmark"></span>
+										</label>
+										<label class="check__container check--val" data-to="list-three">Выравнивание потолка
+											<input type="checkbox" name="opit[3]" value="Капитальный"><span class="icon-checkmark"></span>
+										</label>
+										<label class="check__container check--val" data-to="list-four">Замена электрики
+											<input type="checkbox" name="opit[4]" value="Под ключ"><span class="icon-checkmark"></span>
+										</label>
+										<label class="check__container check--val" data-to="list-four">Замена системы водоснабжения
+											<input type="checkbox" name="opit[5]" value="Под ключ"><span class="icon-checkmark"></span>
+										</label>
+										<label class="check__container check--val" data-to="list-four">Замена системы отопления
+											<input type="checkbox" name="opit[6]" value="Под ключ"><span class="icon-checkmark"></span>
+										</label>
+										<label class="check__container check--val" data-to="list-four">Материал нашей компании
+											<input type="checkbox" name="opit[7]" value="Под ключ"><span class="icon-checkmark"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row check-form">
+								<div class="col-12 col-lg-5">
+									<input type="text" name="phone" placeholder="Контактный телефон: *" data-pform-mailheader="Телефон" data-pform-validation="required" data-pform-mask="+7 (999) 999-99-99{1,10}" im-insert="true">
+								</div>
+								<div class="col-12 col-lg-7">
+									<input class="btn btn--red" value="Отправить" type="submit">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="works" id="works">
 			<div class="container">
 				<div class="row">

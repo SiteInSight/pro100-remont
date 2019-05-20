@@ -17,4 +17,11 @@ $(function() {
 		// other options
 	});
 
+	$('.check-val').click(function(){
+		var t = $(this).attr('data-to');
+
+		$('.price--label__txt').removeClass('active'),
+		$('.' + t).addClass('active')
+	})
+
 });
